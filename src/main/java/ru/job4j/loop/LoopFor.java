@@ -1,9 +1,9 @@
 package ru.job4j.loop;
 
-public class LoopFor {
+public class LoopFOr {
     public static void main(String[] args) {
-        for (int index = 5; index <= 10; index++) {
-            System.out.println(index);
+        for (int i = 5; i <= 10; i++) {
+            System.out.println(i);
         }
     }
 }
