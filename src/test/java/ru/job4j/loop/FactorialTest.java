@@ -9,7 +9,7 @@ class FactorialTest {
         int expected = 120;
         int number = 5;
         int output = Factorial.calculate(number);
-        assertThat(output).isEqualTo(expected); // Проверка для 5!
+        assertThat(output).isEqualTo(expected);
     }
 
     @Test
@@ -17,7 +17,7 @@ class FactorialTest {
         int expected = 1;
         int number = 0;
         int output = Factorial.calculate(number);
-        assertThat(output).isEqualTo(expected); // Проверка для 0!
+        assertThat(output).isEqualTo(expected);
     }
 
     @Test
@@ -25,7 +25,7 @@ class FactorialTest {
         int expected = 1;
         int number = 1;
         int output = Factorial.calculate(number);
-        assertThat(output).isEqualTo(expected); // Проверка для 1!
+        assertThat(output).isEqualTo(expected);
     }
 
     @Test
@@ -33,7 +33,7 @@ class FactorialTest {
         int expected = 6;
         int number = 3;
         int output = Factorial.calculate(number);
-        assertThat(output).isEqualTo(expected); // Проверка для 3!
+        assertThat(output).isEqualTo(expected);
     }
 
     @Test
@@ -41,6 +41,6 @@ class FactorialTest {
         int expected = 3628800;
         int number = 10;
         int output = Factorial.calculate(number);
-        assertThat(output).isEqualTo(expected); // Проверка для 10!
+        assertThat(output).isEqualTo(expected);
     }
 }
