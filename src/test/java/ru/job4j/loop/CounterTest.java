@@ -49,5 +49,4 @@ class CounterTest {
         int result = Counter.sum(start, finish);
         assertThat(result).isNotEqualTo(expected);
     }
-
 }
