@@ -1,29 +1,53 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class CounterTest {
-    public void whenSumFrom0To10Then55() {
-        int result = Counter.sum(0, 10);
-        assertEquals(55, result);
+
+    @Test
+    void whenSumFromZeroToTenThenFiftyFive() {
+        int start = 0;
+        int finish = 10;
+        int expected = 55;
+        int result = Counter.sum(start, finish);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void whenSumFrom3To8Then33() {
-        int result = Counter.sum(3, 8);
-        assertEquals(33, result);
+    void whenSumFromThreeToEightThenThirtyThree() {
+        int start = 3;
+        int finish = 8;
+        int expected = 33;
+        int result = Counter.sum(start, finish);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void whenSumFrom1To1Then1() {
-        int result = Counter.sum(1, 1);
-        assertEquals(1, result);
+    void whenSumFromOneToOneThenOne() {
+        int start = 1;
+        int finish = 1;
+        int expected = 1;
+        int result = Counter.sum(start, finish);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void whenStartGreaterThanFinishThen0() {
-        int result = Counter.sum(5, 3);
-        assertEquals(0, result);
+    void whenSumFromFiveToThreeThenZero() {
+        int start = 5;
+        int finish = 3;
+        int expected = 0; // Если start больше finish, возвращаем 0
+        int result = Counter.sum(start, finish);
+        assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenSumFromNegativeThreeToThreeThenZero() {
+        int start = -3;
+        int finish = 3;
+        int expected = 0;  // Проверка на отрицательные числа
+        int result = Counter.sum(start, finish);
+        assertThat(result).isNotEqualTo(expected);
+    }
+
 }
