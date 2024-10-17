@@ -15,6 +15,3 @@ public class Factorial {
         System.out.println(Factorial.calculate(5));
     }
 }
-
-
-
