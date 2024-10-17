@@ -11,6 +11,7 @@ class FactorialTest {
         int output = Factorial.calculate(number);
         assertThat(output).isEqualTo(expected);
     }
+
     @Test
     void whenCalculateFactorialForZeroThenOne() {
         int expected = 1;
@@ -18,6 +19,7 @@ class FactorialTest {
         int output = Factorial.calculate(number);
         assertThat(output).isEqualTo(expected);
     }
+
     @Test
     void whenCalculateFactorialForOneThenOne() {
         int expected = 1;
@@ -25,6 +27,7 @@ class FactorialTest {
         int output = Factorial.calculate(number);
         assertThat(output).isEqualTo(expected);
     }
+
     @Test
     void whenCalculateFactorialForThreeThenSix() {
         int expected = 6;
@@ -32,6 +35,7 @@ class FactorialTest {
         int output = Factorial.calculate(number);
         assertThat(output).isEqualTo(expected);
     }
+
     @Test
     void whenCalculateFactorialForTenThen3628800() {
         int expected = 3628800;
