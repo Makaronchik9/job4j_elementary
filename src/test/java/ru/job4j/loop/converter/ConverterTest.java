@@ -7,18 +7,38 @@ import static org.assertj.core.api.Assertions.*;
 class ConverterTest {
 
     @Test
-    void rubleToEuro() {
-        float rubles = 180.0f;
-        float expected = 2.0f;
-        float result = Converter.rubleToEuro(rubles);
-        assertThat(result).isEqualTo(expected, withPrecision(0.01f));
+    void whenConvert140RblThen2Euro() {
+        float in = 140;
+        float expected = 2;
+        float out = Converter.rubleToEuro(in);
+        float eps = 0.0001f;
+        assertEquals(expected, out, eps);
     }
 
     @Test
-    void rubleToDollar() {
-        float rubles = 160.0f;
-        float expected = 2.0f;
-        float result = Converter.rubleToDollar(rubles);
-        assertThat(result).isEqualTo(expected, withPrecision(0.01f));
+    void whenConvert200RblThen2dot5Dollar() {
+        float in = 200;
+        float expected = 2.5f;
+        float out = Converter.rubleToDollar(in);
+        float eps = 0.0001f;
+        assertEquals(expected, out, eps);
+    }
+
+    @Test
+    void whenConvert180RblThen2Euro() {
+        float in = 180;
+        float expected = 2;
+        float out = Converter.rubleToEuro(in);
+        float eps = 0.0001f;
+        assertEquals(expected, out, eps);
+    }
+
+    @Test
+    void whenConvert160RblThen2Dollar() {
+        float in = 160;
+        float expected = 2;
+        float out = Converter.rubleToDollar(in);
+        float eps = 0.0001f;
+        assertEquals(expected, out, eps);
     }
 }
