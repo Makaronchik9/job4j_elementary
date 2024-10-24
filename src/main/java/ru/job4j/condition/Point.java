@@ -6,7 +6,6 @@ public class Point {
 
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
     }
-
     public static void main(String[] args) {
         double result = distance(1, 2, 4, 6);
         System.out.println("result (0, 0) to (2, 0) " + result);
