@@ -14,9 +14,9 @@ class TemperatureFitTest {
     }
 
     @Test
-    void whenRoomTemperature10ThenMeat4() {
-        int input = 12;
-        double expected = 4.0;
+    void whenRoomTemperature10ThenMeat3() {
+        int input = 10;
+        double expected = 3.0;
         double output = TemperatureFit.idealTemperatureForMeat(input);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
