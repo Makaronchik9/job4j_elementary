@@ -9,3 +9,4 @@ public class Converter {
         return value / 75;
     }
 }
+
