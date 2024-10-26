@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 class CounterTest {
 
@@ -41,5 +41,3 @@ class CounterTest {
         assertThat(result).isEqualTo(expected);
     }
 }
-
-
