@@ -9,7 +9,7 @@ public class CheckPrimeNumber {
                 break;
             }
         }
-                return prime;
+        return prime;
     }
 
     public static void main(String[] args) {
