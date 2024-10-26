@@ -12,9 +12,9 @@ public class Counter {
     }
 
     public static void main(String[] args) {
-        System.out.println(sumByEven(0, 10));  // Сумма четных чисел от 0 до 10
-        System.out.println(sumByEven(3, 8));   // Сумма четных чисел от 3 до 8
-        System.out.println(sumByEven(-5, 5));  // Сумма четных чисел от -5 до 5
+        System.out.println(sumByEven(0, 10));
+        System.out.println(sumByEven(3, 8));
+        System.out.println(sumByEven(-5, 5));
     }
 }
 
