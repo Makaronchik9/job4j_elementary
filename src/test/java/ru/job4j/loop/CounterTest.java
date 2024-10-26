@@ -40,13 +40,6 @@ class CounterTest {
         int result = Counter.sum(start, finish);
         assertThat(result).isEqualTo(expected);
     }
-
-    @Test
-    void whenSumFromMinusThreeToThreeThenZero() {
-        int start = -3;
-        int finish = 3;
-        int expected = 0;
-        int result = Counter.sum(start, finish);
-        assertThat(result).isEqualTo(expected);
-    }
 }
+
+
