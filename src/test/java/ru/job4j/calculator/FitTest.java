@@ -6,9 +6,9 @@ import static org.assertj.core.api.Assertions.*;
 class FitTest {
 
     @Test
-    void whenMan180Then92() {
-        short input = 180;
-        double expected = 92;
+    void whenMan180Then115() {
+        short input = 200;
+        double expected = 115;
         double output = Fit.manWeight(input);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
