@@ -9,7 +9,7 @@ public class Rectangle {
 
     public static void main(String[] args) {
         double result = diagonal(7, 24);
-        System.out.println("Diagonal of rectangle with length 3 and width 4 is " + result);
+        System.out.println("Diagonal of rectangle with length 7 and width 24 is " + result);
     }
 }
 
