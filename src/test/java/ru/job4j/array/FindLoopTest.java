@@ -5,20 +5,29 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class FindLoopTest {
     @Test
-    void whenArrayHasElementThenReturnIndex() {
-        int[] data = new int[] {5, 10, 3, 7, 9};
-        int element = 7;
+    void whenArrayHas5Then0() {
+        int[] data = new int[] {5, 10, 3};
+        int element = 5;
         int result = FindLoop.indexOf(data, element);
-        int expected = 3;
+        int expected = 0;
         assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whenArrayDoesNotHaveElementThenReturnMinus1() {
-        int[] data = new int[] {5, 10, 3, 7, 9};
-        int element = 4;
+    void whenArrayHasNot10ThenMinus1() {
+        int[] data = new int[] {1, 4, 7};
+        int element = 10;
         int result = FindLoop.indexOf(data, element);
         int expected = -1;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenArrayHas7Then2() {
+        int[] data = new int[] {1, 4, 7, 9};
+        int element = 7;
+        int result = FindLoop.indexOf(data, element);
+        int expected = 2;
         assertThat(result).isEqualTo(expected);
     }
 }
