@@ -1,24 +1,24 @@
-package ru.job4j.converter;
+package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ConverterTest {
+class MatrixCheckTest {
 
     @Test
-    void rubleToDollar() {
+    void monoHorizontal() {
     }
 
     @Test
-    void rubleToEuro() {
+    void monoVertical() {
     }
 
     @Test
-    void dollarToRuble() {
+    void extractDiagonal() {
     }
 
     @Test
-    void euroToRuble() {
+    void isWin() {
     }
 }
