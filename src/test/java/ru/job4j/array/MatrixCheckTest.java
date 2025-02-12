@@ -1,29 +1,43 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
 
-class MatrixCheckTest {
+public class MatrixCheckTest {
     @Test
-    void whenColumnIsFullOfXThenTrue() {
-        char[][] board = {
-                {'X', 'O', 'X'},
-                {'X', 'O', 'X'},
-                {'X', 'O', 'X'}
+    public void whenDiagonalFullX() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
         };
-        assertTrue(MatrixCheck.monoVertical(board, 0));
-        assertTrue(MatrixCheck.monoVertical(board, 2));
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'X', 'X'};
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whenColumnHasDifferentCharsThenFalse() {
-        char[][] board = {
-                {'X', 'O', 'X'},
-                {'O', 'X', 'X'},
-                {'X', 'O', 'O'}
+    public void whenDiagonalFullOne() {
+        char[][] input = {
+                {'1', ' ', ' '},
+                {' ', '1', ' '},
+                {' ', ' ', '1'},
         };
-        assertFalse(MatrixCheck.monoVertical(board, 0));
-        assertFalse(MatrixCheck.monoVertical(board, 1));
-        assertFalse(MatrixCheck.monoVertical(board, 2));
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'1', '1', '1'};
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiagonalMix() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'Y', ' '},
+                {' ', ' ', 'Z'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'Y', 'Z'};
+        assertThat(result).isEqualTo(expected);
     }
 }
+
